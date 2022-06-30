@@ -1,20 +1,45 @@
-// Student Marks (OOP - Exersice).cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
+#include "string.h"
+
+using namespace std;
+
+class Result
+{
+private:
+	int Roll, M1, M2, M3, Total;
+	char name[25];
+
+
+public:
+
+	// Accesors
+	char GetName();
+	
+
+	// Mutators
+	void SetName(char name[25]);
+
+};
+
+char Result::GetName()
+{
+	return name[25];
+}
+
+void Result::SetName(char name[25])
+{
+	name[25] = this->name[25];
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Result r;
+
+	cout <<"Enter Name: " << endl;
+	cin << r.SetName();
+	
+	
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
