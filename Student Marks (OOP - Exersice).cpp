@@ -33,6 +33,9 @@ public:
 	void SetTotal(int X, int Y, int Z);
 	void SetAverage(int E, int F, int G);
 
+	// Functions
+	void Grade(int G);
+
 };
 
 // Getters
@@ -89,7 +92,22 @@ void Result::SetAverage(int E, int F, int G)
 	Average = (E + F + G) / 3;
 }
 
+void Result::Grade(int G)
+{
+	if (G >= 40)
+	{
+		cout << " Your Grade is: C" << endl;
+	}
+	else if (G >= 40 || G <= 70)
+	{
+		cout << "Your Grade is: B" << endl;
+	}
+	else if (G >= 71 || G <= 100)
+	{
+		cout << "Your Grade is: A" << endl;
+	}
 
+}
 
 
 
@@ -133,5 +151,5 @@ int main()
 	r.SetAverage(Marks1, Marks2, Marks3);
 
 	// Setting Grade
-
+	r.Grade(r.GetAverage());
 }
